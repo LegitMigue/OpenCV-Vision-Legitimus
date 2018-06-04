@@ -21,7 +21,7 @@ void VideoPlayer::Play()
 void VideoPlayer::run()
 {
 	//Calculate a normal delay based on camera framerate to prevent non useful emits from the thread
-	int delay = (1000 / frameRate);
+	int delay = (1000 / frameRate)+1;
 	while (!stop) {
 		if (!cameraCapture.read(videoFrame))
 		{
