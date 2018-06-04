@@ -5,4 +5,6 @@ This is a work in progress project for my master's degree in Data Science and Co
 
 This time the drones will be controlled using the optical flow from theirs cameras allowing them to avoid obstacles, recognise objects or even builds maps of the enviroment.
 
+GUI is QT based. The project is being made using VS 2017 with QT Tools.
+
 ...Working in progress...
