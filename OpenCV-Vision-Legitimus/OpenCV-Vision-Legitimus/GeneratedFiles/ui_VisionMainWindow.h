@@ -38,7 +38,7 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         videoFrame = new QLabel(centralWidget);
         videoFrame->setObjectName(QStringLiteral("videoFrame"));
-        videoFrame->setGeometry(QRect(50, 40, 511, 271));
+        videoFrame->setGeometry(QRect(50, 40, 631, 391));
         videoFrame->setStyleSheet(QStringLiteral("Background-color: #000;"));
         VisionMainWindowClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(VisionMainWindowClass);
