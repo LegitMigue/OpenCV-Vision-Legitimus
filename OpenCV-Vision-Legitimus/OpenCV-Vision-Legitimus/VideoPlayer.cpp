@@ -21,23 +21,23 @@ void VideoPlayer::Play()
 void VideoPlayer::run()
 {
 	//Calculate a normal delay based on camera framerate to prevent non useful emits from the thread
-	int delay = (1000 / frameRate)+1;
+	int delay = (1000 / frameRate) + 1;
 	while (!stop) {
-		if (!cameraCapture.read(videoFrame))
+		if (!cameraCapture.read(videoFrameMat))
 		{
 			stop = true;
 		}
 		//If we got color from the camera, use it
-		if (videoFrame.channels() == 3) {
-			cv::cvtColor(videoFrame, RGBVideoFrame, CV_BGR2RGB);
+		if (videoFrameMat.channels() == 3) {
+			cv::cvtColor(videoFrameMat, RGBVideoFrame, CV_BGR2RGB);
 			videoMainImg = QImage((const unsigned char*)(RGBVideoFrame.data),
 				RGBVideoFrame.cols, RGBVideoFrame.rows, QImage::Format_RGB888);
 		}
 		//If not, use grey scale
 		else
 		{
-			videoMainImg = QImage((const unsigned char*)(videoFrame.data),
-				videoFrame.cols, videoFrame.rows, QImage::Format_Indexed8);
+			videoMainImg = QImage((const unsigned char*)(videoFrameMat.data),
+				videoFrameMat.cols, videoFrameMat.rows, QImage::Format_Indexed8);
 		}
 		//Thread emit QImage to the QT GUI
 		emit processedImage(videoMainImg);

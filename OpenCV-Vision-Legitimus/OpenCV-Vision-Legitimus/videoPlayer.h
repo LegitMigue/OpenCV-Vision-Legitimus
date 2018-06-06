@@ -1,6 +1,5 @@
 #pragma once
-#ifndef VIDEOPLAYER_H
-#define VIDEOPLAYER_H
+
 #include <QMutex>
 #include <QThread>
 #include <QImage>
@@ -15,7 +14,7 @@ class VideoPlayer : public QThread
 private:
 	bool stop;
 	int frameRate;
-	Mat videoFrame;
+	Mat videoFrameMat;
 	VideoCapture cameraCapture;
 	Mat RGBVideoFrame;
 	QImage videoMainImg;
@@ -36,4 +35,3 @@ public:
 	//Stop video streaming
 	void Stop();
 };
-#endif // VIDEOPLAYER_H
