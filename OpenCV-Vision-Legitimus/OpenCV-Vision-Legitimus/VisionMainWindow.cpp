@@ -85,7 +85,7 @@ void VisionMainWindow::serialPortDisconnection()
 	serial->close();
 }
 
-//Botton handlers
+//Button handlers
 void VisionMainWindow::on_refreshSerialPortsButton_clicked()
 {
 	updateSerialPorts();
