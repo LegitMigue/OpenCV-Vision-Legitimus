@@ -5,8 +5,6 @@
 
 +++ Make universal control GUI for camera drones.
 
-++ ~~Add terminal to GUI~~
-
 ++ Edit GUI to make it work properly with Parrot Drones
 
 **WiP**
@@ -31,9 +29,7 @@
 **WiP**
 
 ## Internal Functions:
-+++ ~~Add Arduino support~~
 
-+++ ~~Add serial port support~~
 
 ## Documentation:
 +++ TFM Memory
@@ -45,7 +41,5 @@
 ### Minor Fixes:
 
 ## Tests:
-
-+ ~~Arduino tests~~
 
 ### Parrot Drone test:
